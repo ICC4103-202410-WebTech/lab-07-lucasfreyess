@@ -3,6 +3,24 @@
 
 I am currently having a problem with my github key. I have been trying to push for more than an hour, but it doesn't let me! It doesn't recognize the key, so I tried to change to a SSH key, but I am also having problems with that one. I am very frustrated that this is happening, since I finished this before 20:00, so I am hoping you can understand if I push today, past the limit hour, please! I feel like I am close to doing it, so I will probably push a little late; i am very sorry.
 
+The errors are the following:
+
+lucasfreyess@LAPTOP-CGRSS1NQ:~/webtech/lab-07-lucasfreyess$ git remote -v
+origin  git@github.com:lucasfreyess/lab-07-lucasfreyess.git (fetch)
+origin  git@github.com:lucasfreyess/lab-07-lucasfreyess.git (push)
+lucasfreyess@LAPTOP-CGRSS1NQ:~/webtech/lab-07-lucasfreyess$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+lucasfreyess@LAPTOP-CGRSS1NQ:~/webtech/lab-07-lucasfreyess$ git push --set-upstream origin main
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
 # Lab 07
 
 In this lab, your task is to establish relationships between the tables within the database. You'll need to establish two one-to-many relationships: one between the `users` table and the `posts` table, and another between the `posts` table and itself. Additionally, you'll create a many-to-many relationship between the `posts` and `tags` tables. Furthermore, you are required to implement all necessary validations and callbacks for the models
