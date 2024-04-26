@@ -1,4 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/0PWCtUDg)
+# please read!!
+
+I am currently having a problem with my github key. I have been trying to push for more than an hour, but it doesn't let me! It doesn't recognize the key, so I tried to change to a SSH key, but I am also having problems with that one. I am very frustrated that this is happening, since I finished this before 20:00, so I am hoping you can understand if I push today, past the limit hour, please! I feel like I am close to doing it, so I will probably push a little late; i am very sorry.
+
 # Lab 07
 
 In this lab, your task is to establish relationships between the tables within the database. You'll need to establish two one-to-many relationships: one between the `users` table and the `posts` table, and another between the `posts` table and itself. Additionally, you'll create a many-to-many relationship between the `posts` and `tags` tables. Furthermore, you are required to implement all necessary validations and callbacks for the models
