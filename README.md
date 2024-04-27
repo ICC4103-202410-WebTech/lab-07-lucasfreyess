@@ -21,6 +21,10 @@ fatal: Could not read from remote repository.
 Please make sure you have the correct access rights
 and the repository exists.
 
+## error fixed!
+
+I should push around 20:08 (time as of writing this). I fixed it ! i had a bad ssh direction (git@github:...) and the changes i made to this readme kind of messed everthing for a little... i hope this wasn't too much of a hassle for you!!
+
 # Lab 07
 
 In this lab, your task is to establish relationships between the tables within the database. You'll need to establish two one-to-many relationships: one between the `users` table and the `posts` table, and another between the `posts` table and itself. Additionally, you'll create a many-to-many relationship between the `posts` and `tags` tables. Furthermore, you are required to implement all necessary validations and callbacks for the models
@@ -70,17 +74,19 @@ Make sure to create the relationships between the tables, so the database is pop
 1. Find all the posts that belong to a user with the name "John Doe".
 
 ```ruby
-### Code here
+User.find_by(name: "John Doe").posts
 ```
 
 2. Find all the tags that belong to a post with the title "Post 1".
 
 ```ruby
-### Code here
+Post.find_by(title: "Post 1").tags
 ```
 
 3. Find all users that have a post with the tag "Tag 1".
 
 ```ruby
-### Code here
+User.joins(posts: {post_tags: :tag}).where(tags: {name: "Tag 1"}).distinct        
 ```
+
+* ADDENDUM: feel free to ignore this if you don't clone the repository when proofreading, but i created a PostTag object inside the rails console, in the following manner: PostTag.create(post_id: "1", tag_id: "4"), as to know if the second query returned more than one tag. This wouldn't have been necessary if I seeded the db with it in mind... it doesn't affect the overall result but i felt the need for transparency!! perdon por las molestias..
